@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/Users/corentin/Documents/Enseirb_3A/RL/alphaGo/namedGame.py", line 68, in <module>
+    move = players[nextplayer].getPlayerMove() # The move must be given by "A1", ... "J8" string coordinates (not as an internal move)
+  File "/Users/corentin/Documents/Enseirb_3A/RL/alphaGo/randomPlayer.py", line 63, in getPlayerMove
+    self._board.push(move)
+  File "/Users/corentin/Documents/Enseirb_3A/RL/alphaGo/Goban.py", line 294, in push
+    return self.play_move(m)
+  File "/Users/corentin/Documents/Enseirb_3A/RL/alphaGo/Goban.py", line 255, in play_move
+    captured = self._put_stone(fcoord, self._nextPlayer)
+  File "/Users/corentin/Documents/Enseirb_3A/RL/alphaGo/Goban.py", line 456, in _put_stone
+    self._merge_strings(stringNumber, currentString)
+  File "/Users/corentin/Documents/Enseirb_3A/RL/alphaGo/Goban.py", line 419, in _merge_strings
+    assert self._stringUnionFind[str2] == -1
+AssertionError
+
+
+    A B C D E F G H J
+  9 O O O . O O O X X 9
+  8 O O O O O O O X X 8
+  7 O . O O O O O X X 7
+  6 . O . . O O X X X 6
+  5 . . . O O O O X X 5
+  4 . . . O O O X X X 4
+  3 O . + O X X X X . 3
+  2 O X X O O X X X X 2
+  1 O O O O . O X X X 1
+    A B C D E F G H J
+hash =  6064999885335084668
+MCTS player is Black - X
